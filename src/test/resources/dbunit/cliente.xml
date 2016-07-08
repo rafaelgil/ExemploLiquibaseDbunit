@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+
+	<CIDADE CODIGO="1" NOME="MARINGA" />
+	<CLIENTE CODIGO="1" NOME="RONALD A. WALLACE" CPF="495.680.041-06" RG="20.050.062-4" CIDADE="1"/>
+	
+</dataset>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="rafaelcarmona" id="1">
+		<createTable tableName="cidade">
+			<column name="codigo" type="numeric(10)">
+				<constraints nullable="false" primaryKey="true" primaryKeyName="pk_cidade"/>
+			</column>
+			<column name="nome" type="varchar(255)" />
+		</createTable>
+	</changeSet>
+
+	<changeSet author="rafaelcarmona" id="2">
+		<createTable tableName="cliente">
+			<column name="codigo" type="numeric(10)">
+				<constraints nullable="false" primaryKey="true" primaryKeyName="pk_clinte"/>
+			</column>
+			<column name="nome" type="varchar(255)" />
+			<column name="rg" type="varchar(255)" />
+			<column name="cpf" type="varchar(255)" />
+			<column name="cidade" type="numeric(10)">
+				<constraints foreignKeyName="fk_cidade_cliente" referencedColumnNames="codigo" referencedTableName="cidade"/>
+			</column>			
+		</createTable>
+	</changeSet>
+	
+	
+
+</databaseChangeLog>
